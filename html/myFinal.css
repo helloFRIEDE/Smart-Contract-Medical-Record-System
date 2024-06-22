@@ -1,0 +1,214 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.add-section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.add-section .add-patient,
+.add-section .add-medical-record,
+.add-section .change-primary-doctor,
+.add-section .add-doctor,
+.add-section .revoke-doctor {
+    border: 1px solid #ddd;
+    padding: 20px 0 20px 20px;
+    border-radius: 8px;
+}
+
+.add-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.add-section input[type="text"],
+.add-section input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-section button {
+    background-color: #007bff;
+    color: #fff;
+    float: right;
+    border: none;
+    margin-right: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.add-section button:hover {
+    background-color: #0056b3;
+}
+
+.get-section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+}
+
+.get-section .get-medical-record,
+.get-section .get-medical-record-by-year,
+.get-section .get-patient-detail-by-address,
+.get-section .get-patient-detail-by-no,
+.get-section .get-patient-by-primary-doctor,
+.get-section .check-role,
+.get-section .get-patient-by-name {
+    border: 1px solid #ddd;
+    padding: 20px 0 20px 20px;
+    border-radius: 8px;
+}
+
+.get-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.get-section input[type="text"],
+.get-section input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.get-section button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    float: right;
+    margin-right: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.get-section button:hover {
+    background-color: #218838;
+}
+
+.get-section ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 800px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#modalInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* The Close Button */
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    /* position: absolute; */
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-section.disabled,
+.get-section.disabled {
+    filter: grayscale(100%);
+    pointer-events: none;
+    /* Disable mouse events */
+}
+
+.doctor-list-1 {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New';
+}
