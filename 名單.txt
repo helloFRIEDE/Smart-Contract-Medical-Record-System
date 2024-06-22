@@ -1,0 +1,18 @@
+Name: Owner (main) doctor
+0xb937e6fe298f7403a5071741513ae3b7a649bb18 
+
+Name: Amy patient, primary(Owner->lilith)
+0x6a058cf507b156db2f224bb3415adc92fa79411d
+medical record
+2021/10/12 covid-19
+2021/12/30 fever
+2022/05/25 headache
+
+Name: lilith doctor, patient, primary(Owner)
+0x4de73a5b0b9e30eda0bc3a0d2be00ad1d5392fea
+
+Name: Ben doctor, revoke
+0x2b7A1bD9f44d70858E5740762575b6CFC1273BE7 
+
+Name: Amy (Frnak) patient, primary(Owner)
+0x17DFdC373684D80407c70d332513BAB02B15fc3B 
