@@ -170,7 +170,7 @@ contract MedicalRecord {
         Patient memory patient = patients[patientAddress];
         return (patient.no, patient.patientAddress, patient.name, patient.age, patient.primaryDoctor);
     }
-    
+
     function getPatientsByDoctor(address myAdd, address _doctorAddress) public view returns (address[] memory) {
         /*address[] memory a = new address[](0);
         if (doctorAddresses[myAdd] == false)
@@ -195,9 +195,9 @@ contract MedicalRecord {
         require(doctorAddresses[_doctorAddress], "Doctor not found");
 
         doctorAddresses[_doctorAddress] = false;
-        delete doctors[_doctorAddress];  // delete _doctorAddress from mapping
+        delete doctors[_doctorAddress]; // delete _doctorAddress from mapping
         doctorNumber--;
-        
+
         emit DoctorRevoked(_doctorAddress);
     }
 
@@ -221,13 +221,7 @@ contract MedicalRecord {
         return (doctor.no, doctor.doctorAddress, doctor.name, doctor.age);
     }
 
-    function getDoctorDetailsByNumber(uint256 _no) public view returns (uint256, address, string memory, uint256) {
-        address doctorAddress = doctorNumbers[_no];
-        Doctor memory doctor = doctors[doctorAddress];
-        return (doctor.no, doctor.doctorAddress, doctor.name, doctor.age);
-    }
-
-    function getPatientsByName(address myAdd, string memory _name) public view onlyDoctor(myAdd) returns (address[] memory) { // 
+    function getPatientsByName(address myAdd, string memory _name) public view onlyDoctor(myAdd) returns (address[] memory) {
         uint256 count = 0;
         for (uint256 i = 1; i <= patientNumber; i++) {
             if (keccak256(abi.encodePacked(patients[patientNumbers[i]].name)) == keccak256(abi.encodePacked(_name))) {
